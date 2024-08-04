@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://kit.fontawesome.com/0c62331395.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+     <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Arvino</title>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+    </style>
+
+  </head>
+  <body>
+    <div style="min-width: 20px;">
+        <div x-data="{atTop: true}" @scroll.window="atTop = (window.pageYOffset < 80) ? true: false">
+
+            <header class=" p-8 w-full absolute animate__animated animate__slideInDown animate__faster text-white z-10" :class="{'hidden': !atTop}">
+                <nav class="flex justify-between  items-center  mx-auto">
+                    <div class="flex items-center gap-2">
+                        <img class="rounded-full w-8 shadow-xl" src="/assets/images/logo.webp" alt="logo" />
+                        <span class="font-bold text-xl">Vino</span>
+                    </div>
+                    <ul class="xl:flex gap-2 hidden">
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-75 ease-in " href="#tentang-saya" >Tentang Saya</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-75 ease-in " href="#keahlian" >Keahlian</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-75 ease-in " href="#pengalaman-pekerjaan" >Pengalaman Pekerjaan</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-75 ease-in " href="#projek" >Projek</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-75 ease-in " href="#sertifikat" >Sertifikat</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-white hover:text-black hover:shadow-xl transition-all duration-75 ease-in " href="#kontak" >Kontak</a>
+                        </li>
+                    </ul>
+                    <!-- <button class="border-2 px-2 py-1 rounded border-white xl:hidden block">Menu</button> -->
+                </nav>
+            </header>
+            <header class="bg-white shadow-xl p-4 fixed w-full animate__animated animate__slideInDown animate__faster z-10" :class="{'hidden': atTop}">
+                <nav class="flex justify-between  items-center max-w-6xl mx-auto">
+                    <div class="flex items-center gap-2">
+                        <img class="rounded-full w-8" src="/assets/images/logo.webp" alt="logo" />
+                        <span class="font-bold text-xl">Vino</span>
+                    </div>
+                    <ul class="sm:flex gap-2 hidden">
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-red-500 hover:text-white hover:shadow-xl transition-all duration-75 ease-in " href="#tentang-saya" >Tentang Saya</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-red-500 hover:text-white hover:shadow-xl transition-all duration-75 ease-in " href="#keahlian" >Keahlian</a>
+                        </li>
+                        
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-red-500 hover:text-white hover:shadow-xl transition-all duration-75 ease-in " href="#pengalaman-pekerjaan" >Pengalaman Pekerjaan</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-red-500 hover:text-white hover:shadow-xl transition-all duration-75 ease-in " href="#projek" >Projek</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-red-500 hover:text-white hover:shadow-xl transition-all duration-75 ease-in " href="#projek" >Sertifikat</a>
+                        </li>
+                        <li>
+                            <a class="font-semibold rounded px-2 py-1 hover:bg-red-500 hover:text-white hover:shadow-xl transition-all duration-75 ease-in " href="#kontak" >Kontak</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <section>
+            <div style="height: 100vh; background: url('/assets/images/bg.jpg'); background-size: cover; background-repeat: no-repeat;">
+                <div class="absolute top-0 right-0 left-0 bottom-0 flex text-white justify-center items-center z-0 p-2">
+                    <div class="animate__animated xl:animate__fadeInLeft animate__fadeInUp flex flex-col gap-2">
+                        <div class="flex items-center gap-2">
+                            <img class="rounded-full w-20" src="/assets/images/logo.webp" />
+                            <h2 class="text-5xl font-semibold">Vino</h2>
+                        </div>
+                        <h2 class="text-3xl font-semibold leading-snug text-center">Hallo my name is Arvino, <br/> i'am Fullstack Developer</h2>
+                        <div class="flex justify-center gap-2 ">
+                            <a href="https://github.com/ar-vinooo" target="_blank" class="hover:opacity-90 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all ease-in border border-gray-600 hover:border-gray-50"><img  src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /></a>
+                            <a href="https://www.linkedin.com/in/arvino-vino" target="_blank" class="hover:opacity-90 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all ease-in border border-gray-800 hover:border-gray-50"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+                            <a href="https://www.hackerrank.com/arvinoart" target="_blank" class="hover:opacity-90 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all ease-in border border-gray-800 hover:border-gray-50"><img src="https://img.shields.io/badge/-Hackerrank-2EC866?style=for-the-badge&logo=HackerRank&logoColor=white" /></a>
+                        </div>
+                    </div>
+                    <div class="animate__animated animate__fadeInRight hidden xl:block">
+                        <img class="w-80" src="/assets/images/profile.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#f0f0f0] text-[#4e4e4e]" id="tentang-saya">
+                <div class="container mx-auto md:p-20 p-5 flex flex-col gap-5">
+                    <h2 class="text-2xl font-semibold">Tentang Saya</h2>
+                    <p style="text-align: justify;">Perkenalkan nama saya Arvino, Saya seorang fullstack developer yang mampu beradaptasi dengan teknologi terbaru dalam pengembangan aplikasi mobile maupun web. Saya telah memiliki banyak pengalaman pengembangan aplikasi mobile dan web. Saya selalu mengembangkan diri saya agar dapat menjadi programmer profesional. Saya juga seorang freelancer. </p>
+                </div>
+            </div>
+            <div id="keahlian">
+                <div class="container mx-auto md:p-20 p-5 flex flex-col gap-5">
+                    <h2 class="text-2xl  font-semibold">Keahlian</h2>
+                    <div class="flex flex-col gap-4">
+                        <div>
+                            <div class="mb-1">Website</div>
+                            <div class="flex flex-wrap gap-1">
+                                <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
+                                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+                                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+                                <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E">
+                                <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white">
+                                <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+                                <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D">
+                                <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
+                                <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white">
+                                <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E">
+                                <img src="https://img.shields.io/badge/livewire-4e56a6?style=for-the-badge&logo=livewire&logoColor=white">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-1">Mobile</div>
+                            <div class="flex flex-wrap gap-1">
+                                <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white">
+                                <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-1">Backend</div>
+                            <div class="flex flex-wrap gap-1">
+                                <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white">
+                                <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white">
+                                <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white">
+                                <img src="https://img.shields.io/badge/Socket.io-010101?&style=for-the-badge&logo=Socket.io&logoColor=white">
+                                <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-1">UI</div>
+                            <div class="flex flex-wrap gap-1">
+                                <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
+                                <img src="https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white">
+                                <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white">
+                                <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-1">Database</div>
+                            <div class="flex flex-wrap gap-1">
+                                <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white">
+                                <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white">
+                                <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white">
+                                <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
+                                <img src="https://img.shields.io/badge/redis-%23DD0031.svg?&style=for-the-badge&logo=redis&logoColor=white">
+                                <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white">
+                                <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mb-1">Other</div>
+                            <div class="flex flex-wrap gap-1">
+                                <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white">
+                                <img src="https://img.shields.io/badge/apple%20silicon-333333?style=for-the-badge&logo=apple&logoColor=white">
+                                <img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white">
+                                <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white">
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+            
+            <div id="pengalaman-pekerjaan" class="border-t-2 bg-gradient-to-br to-[#010835] from-[#013179] text-white">
+                <div class="container mx-auto md:p-20 p-5 flex flex-col gap-5">
+                    <h2 class="text-2xl  font-semibold">Pengalaman Pekerjaan</h2>
+                    <div>
+                        <div class="bg-[#013178]  w-full rounded p-5 mb-5 shadow-lg >
+                            <p>
+                                IT Programmer - Magang PMMB<br>
+                                <span class="text-xl">PT Perkebunan Nusantara VI</span><br>
+                                <span class="text-sm text-gray-300">03-2021 s/d 09-2021 | Jambi</span>
+                                <br>
+                                <br>
+                                <ol class="list-disc list-inside">
+                                    <li>Sebagai web dan mobile developer</li>
+                                    <li>Membuat dan mengembangkan web dan mobile untuk oprasional perusahaan</li>
+                                </ol>
+                                <br>
+                                Skill/Tech : PHP, Laravel, Flutter, VueJS
+                            </p>
+                        </div>
+                        <div class="bg-[#013178]  w-full rounded p-5 mb-5 shadow-lg ">
+                            <p>
+                                IT Programmer - Kontrak<br>
+                                <span class="text-xl">PT Perkebunan Nusantara VI</span><br>
+                                <span class="text-sm text-gray-300">09-2021 s/d 03-2022 | Jambi</span>
+                                <br>
+                                <br>
+                                <ol class="list-disc list-inside">
+                                    <li>Sebagai web dan mobile developer</li>
+                                    <li>Membuat dan mengembangkan web dan mobile untuk oprasional perusahaan</li>
+                                </ol>
+                                <br>
+                                Skill/Tech : PHP, Laravel, Flutter, VueJS
+                            </p>
+                        </div>
+                        <div class="bg-[#013178]  w-full rounded p-5 mb-5 shadow-lg ">
+                            <p>
+                                FullStack Developer<br>
+                                <span class="text-xl">PT CIPTA NIAGA DIGITAL</span><br>
+                                <span class="text-sm text-gray-300">04-2022 s/d Sekarang | Jambi</span><br>
+                                <br>
+                                <ol class="list-disc list-inside">
+                                    <li>Perusahaan bergerak dibidang e-commerce</li>
+                                    <li>Menambahkan fitur baru, memperbaiki bug dan optimasi aplikasi mobile dan web yang dimiliki oleh perusahaan</li>
+                                    <li>Mengintegrasikan web dengan vendor, dan juga integrasi api seperti payment gateway, whatsapp notification, mutasi bank, jurnal mekari</li>
+                                </ol>
+                                <br>
+                                <span class="font-semibold">Linkchat (linkchat.id)</span><br>
+                                mengintegrasikan woowa ( whatsapp ) untuk notifikasi, dan mengintegrasikan moota ( autopaid system ) untuk pembayaran otomatis, serta memperbaiki bug dan menambahkan fitur baru pada web serta memperbaiki bug dan menambahkan fitur baru<br>
+                                <br>
+                                <span class="font-semibold">SabilaMall (sabilamall.co.id)</span><br>
+                                mengoptimasi dan memperbaiki bug pada mobile (flutter) dan web (reactjs) serta menambahkan fitur baru<br>
+                                <br>
+                                <span class="font-semibold">StokBareng (stokbareng.com)</span><br>
+                                memperbaiki bug pada web (nextjs/typecript) serta menambahkan fitur baru<br>
+                                <br>
+                                <span class="font-semibold">Sabilamall Panel</span><br>
+                                memperbaiki bug pada web (laravel/php native/VueJS) serta menambahkan fitur baru<br>
+                                <br>
+                                Skill/Tech : PHP, Laravel, Flutter, VueJS, ReactJS, NextJS, TypeScript, NodeJS, Mysql
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projek" class="border-t-2 ">
+                <div class="container mx-auto md:p-20 p-5 flex flex-col gap-5">
+                    <h2 class="text-2xl  font-semibold">Projek</h2>
+                    <div class="flex flex-col md:flex-row gap-10">
+                        <div>
+                            <div class="mb-1 font-semibold">Solo Projek</div>
+                            <ul class="list-inside list-decimal">
+                                <li>Website e-Learning SMK Negeri 2 Kota Jambi</li>
+                                <li>Android FerryJam Ku</li>
+                                <li>Android e-Learning SMK Negeri 2 Kota Jambi</li>
+                                <li>Klinik Pratama</li>
+                                <li>Petshop</li>
+                                <li>Noleh Jambi</li>
+                                <li>Website e-Doremi PT Perkebunan Nusantara VI</li>
+                                <li>Android e-Doremi PT Perkebunan Nusantara VI</li>
+                                <li>e-Planters PT Perkebunan Nusantara VI</li>
+                                <li>e-Contract PT Perkebunan Nusantara VI</li>
+                                <li>WA Blaster PT Perkebunan Nusantara VI</li>
+                                <li>StandFor PT Perkebunan Nusantara VI</li>
+                                <li>e-Kernel PT Perkebunan Nusantara VI</li>
+                                <li>Android ASISTAN (Presensi Geofence) PT Perkebunan Nusantara VI</li>
+                                <li>e-Comprice PT Perkebunan Nusantara VI</li>
+                                <li>Website e-Retail PT Perkebunan Nusantara VI</li>
+                                <li>Android e-Retail PT Perkebunan Nusantara VI</li>
+                                <li>Aplikasi Monitoring Display PT Perkebunan Nusantara VI</li>
+                                <li>P2BJ PT Perkebunan Nusantara VI</li>
+                                <li>Apotek Lidya</li>
+                                <li>Tina Wedding Organizer</li>
+                                <li>PPDB SMK YKPP</li>
+                                <li>PSB SMK PGRI 4</li>
+                                <li>Perpustakaan SMA Swasta Pertiwi</li>
+                                <li>SIAKAD SMA FPP</li>
+                                <li>Website e-Learning</li>
+                                <li>Android Salvo (Management Karyawan & Presensi Geofence)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="mb-1 font-semibold">Team Projek</div>
+                            <ol class="list-decimal list-inside">
+                                <li>SIEDASI PT Perkebunan Nusantara VI</li>
+                                <li>e-MoBill PT Perkebunan Nusantara VI</li>
+                                <li>Aplikasi Monitor PT Perkebunan Nusantara VI</li>
+                                <li>LinkChat Sabilamall</li>
+                                <li>Api Vendor Sabilamall</li>
+                                <li>Sabilamall</li>
+                                <li>Server TEYP</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </div>
+
+
+ </body>
+</html>
